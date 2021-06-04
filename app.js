@@ -16,6 +16,9 @@ var mongoose = require('mongoose')
 mongoose.connect('mongodb+srv://jaya:jaya@cluster0.8p7tj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useMongoClient: true })
   .then(() => { console.log(`Succesfully Connected to the Mongodb Database `) })
   .catch(() => { console.log(`Error Connecting to the Mongodb Database`) })
+app.get('/', (req,res)=>{
+  res.send("Welcome to github app server");
+});
 
 app.post('/signup', (req, res) => {
   console.log(req.body);
