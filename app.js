@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
 app.use(cors());
-const port = 3100;
+var port = process.env.PORT || 3500;
 app.set('port', port);
 
 var mongoose = require('mongoose')
@@ -133,6 +133,5 @@ authenticate = (req, res, next) => {
 };
 
 // Function to listen on the port
-port = process.env.PORT || port
 app.listen(port, () => console.log(`This app is listening on port ${port}`));
 
