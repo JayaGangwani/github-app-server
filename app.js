@@ -133,5 +133,6 @@ authenticate = (req, res, next) => {
 };
 
 // Function to listen on the port
+port = process.env.PORT || port
 app.listen(port, () => console.log(`This app is listening on port ${port}`));
 
